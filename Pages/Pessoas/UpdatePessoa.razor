@@ -1,0 +1,32 @@
+@page "/update/{Id}"
+@inject NavigationManager NavigationManager;
+@inject Projeto.Services.IPessoasService PessoasService;
+
+<h1>Criar Pessoa</h1>
+
+<EditForm Model="PessoasModel" OnValidSubmit="HandleUpdate">
+    <div class="form-group mb-3">
+        <h3>Nome: </h3>
+        <InputText @bind-Value="PessoasModel.Nome" class="form-control"/>
+    </div>
+    
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+</EditForm>
+
+@code {
+    Projeto.Models.Pessoas PessoasModel = new();
+    
+    [Parameter]
+    public string Id {get; set;}
+
+    protected override async Task OnInitializedAsync() {
+        PessoasModel = await PessoasService.GetById(Guid.Parse(Id));
+    }
+    async Task HandleUpdate() {
+        await PessoasService.Update(PessoasModel);
+        NavigationManager.NavigateTo("/pessoas");
+    }
+}

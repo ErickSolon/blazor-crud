@@ -1,0 +1,27 @@
+@page "/create"
+@inject NavigationManager NavigationManager;
+@inject Projeto.Services.IPessoasService PessoasService;
+
+<h1>Criar Pessoa</h1>
+
+<EditForm Model="PessoasModel" OnValidSubmit="CriarPessoa">
+    <div class="form-group mb-3">
+        <h3>Nome: </h3>
+        <InputText @bind-Value="PessoasModel.Nome" class="form-control"/>
+    </div>
+    
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+</EditForm>
+
+@code {
+    Projeto.Models.Pessoas PessoasModel = new();
+
+    async Task CriarPessoa() {
+        PessoasModel.GenerateId();
+        await PessoasService.Add(PessoasModel);
+        NavigationManager.NavigateTo("/pessoas");
+    }
+}

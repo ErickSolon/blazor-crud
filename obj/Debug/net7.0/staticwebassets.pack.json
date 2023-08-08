@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/obj/Debug/net7.0/scopedcss/projectbundle/Projeto.bundle.scp.css",
+      "PackagePath": "staticwebassets/Projeto.bundle.scp.css"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/erick/Workspace/C#/Projeto/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Projeto.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Projeto.props",
+      "PackagePath": "build\\Projeto.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Projeto.props",
+      "PackagePath": "buildMultiTargeting\\Projeto.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Projeto.props",
+      "PackagePath": "buildTransitive\\Projeto.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

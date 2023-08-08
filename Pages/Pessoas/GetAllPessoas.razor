@@ -1,0 +1,51 @@
+@page "/pessoas"
+@inject IJSRuntime IJSRuntime
+@inject Projeto.Services.IPessoasService PessoasService;
+
+<h1>Adicionar Pessoa</h1>
+
+<a href="/create" class="btn btn-success">Criar</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(PessoasLst != null && PessoasLst.Count > 0) {
+            @foreach(var Dados in PessoasLst) {
+                <tr>
+                    <td>@Dados.Id</td>
+                    <td>@Dados.Nome</td>
+                    <td>
+                        <a href="/update/@Dados.Id" type="button" class="btn btn-warning">Update</a>
+                        <button type="button" class="btn btn-danger" @onclick="async () => await DeletarPessoa(Dados.Id)">Delete</button>
+                    </td>
+                </tr>
+            } 
+        } else {
+            <h7>Sem dados!</h7>
+        }
+    </tbody>
+</table>
+
+@code {
+    List<Projeto.Models.Pessoas> PessoasLst = new();
+    protected override async Task OnInitializedAsync()
+    {
+        PessoasLst = await PessoasService.FindAll();
+    }
+
+    async Task DeletarPessoa(Guid id) {
+        bool confirm = await IJSRuntime.InvokeAsync<bool>("confirm", "Tem certeza que deseja deletar este usuário?");
+        if(confirm) {
+            var Pessoa = await PessoasService.GetById(id);
+            await PessoasService.Delete(Pessoa);
+            PessoasLst = await PessoasService.FindAll();
+            StateHasChanged();
+        }        
+    }
+}
